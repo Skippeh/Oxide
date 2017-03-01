@@ -7,8 +7,8 @@
     <ProjectGuid>{3240F653-F89D-40E5-B355-EA5B06D52E6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hellion</RootNamespace>
-    <AssemblyName>Hellion</AssemblyName>
+    <RootNamespace>Oxide.Game.Hellion</RootNamespace>
+    <AssemblyName>Oxide.Game.Hellion</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -51,6 +51,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HellionCore.cs" />
+    <Compile Include="HellionExtension.cs" />
+    <Compile Include="HellionPlugin.cs" />
+    <Compile Include="HellionPluginLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
