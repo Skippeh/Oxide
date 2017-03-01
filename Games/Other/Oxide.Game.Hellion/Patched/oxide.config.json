@@ -1,0 +1,15 @@
+{
+  "OxideConsole": {
+    "Enabled": false,
+    "MinimalistMode": true,
+    "ShowStatusBar": true,
+    "ShowStacktraces": false
+  },
+  "InstanceCommandLines":
+  [
+    "{oxide.directory}",
+    "oxide"
+  ],
+  "ConfigDirectory": "config",
+  "ExtensionDirectory": ""
+}
