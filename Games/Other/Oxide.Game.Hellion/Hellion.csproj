@@ -36,16 +36,16 @@
     </Reference>
     <Reference Include="HELLION_Dedicated">
       <HintPath>Patched\HELLION_Dedicated.exe</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
       <HintPath>Dependencies\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
       <HintPath>..\Oxide.Core\Dependencies\protobuf-net.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Oxide.Core\Dependencies\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
