@@ -103,30 +103,6 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 197,
-            "ReturnBehavior": 0,
-            "ArgumentBehavior": 4,
-            "ArgumentString": "l0",
-            "HookTypeName": "Simple",
-            "Name": "OnSpawnStartingModule",
-            "HookName": "IOnSpawnStartingModule",
-            "AssemblyName": "HELLION_Dedicated.exe",
-            "TypeName": "ZeroGravity.Server",
-            "Flagged": false,
-            "Signature": {
-              "Exposure": 2,
-              "Name": "SpawnStartingModule",
-              "ReturnType": "ZeroGravity.Objects.Ship",
-              "Parameters": []
-            },
-            "MSILHash": "5okBPDi5kwOQPMWe1QfOojLTKG5cU7f32SCPvs4h12g=",
-            "BaseHookName": null,
-            "HookCategory": "Game"
-          }
-        },
-        {
-          "Type": "Simple",
-          "Hook": {
             "InjectionIndex": 724,
             "ReturnBehavior": 0,
             "ArgumentBehavior": 0,
@@ -145,7 +121,7 @@
             },
             "MSILHash": "TjHZu6HBU7QKUFkLtmHoz5Y04RS1H1NzmJtAIXJu6Kk=",
             "BaseHookName": null,
-            "HookCategory": null
+            "HookCategory": "Game"
           }
         },
         {
@@ -171,7 +147,35 @@
             },
             "MSILHash": "canZ0jWkz8iQ2b6u7v/FrzYbQGAnTRRcjxfZpoPo/2o=",
             "BaseHookName": null,
-            "HookCategory": null
+            "HookCategory": "Server"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 39,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "a0, l0",
+            "HookTypeName": "Simple",
+            "Name": "OnSpawnStartingModule",
+            "HookName": "IOnSpawnStartingModule",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 0,
+              "Name": "AddPlayerToShip",
+              "ReturnType": "System.Boolean",
+              "Parameters": [
+                "ZeroGravity.Objects.Player",
+                "System.Int64",
+                "ZeroGravity.Data.GameScenes/SceneID"
+              ]
+            },
+            "MSILHash": "dZvQp8nXBuWlqPxzDGZAvr7RE3xznbjikt9LEb+pVKg=",
+            "BaseHookName": null,
+            "HookCategory": "Game"
           }
         }
       ],
