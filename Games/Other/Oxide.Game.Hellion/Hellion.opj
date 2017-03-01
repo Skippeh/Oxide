@@ -47,7 +47,7 @@
               "ReturnType": "System.Void",
               "Parameters": []
             },
-            "MSILHash": "NHZS7GsDyRwBb/J/y5A/zVq+LAVQxOlPBAHg8Vgw+Es=",
+            "MSILHash": "QvpeP/lAjRubTzA9UmzJzkqK9kAHf20dINOVyNm2j6I=",
             "BaseHookName": null,
             "HookCategory": "Server"
           }
@@ -103,7 +103,7 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 724,
+            "InjectionIndex": 779,
             "ReturnBehavior": 0,
             "ArgumentBehavior": 0,
             "ArgumentString": null,
@@ -119,7 +119,7 @@
               "ReturnType": "System.Void",
               "Parameters": []
             },
-            "MSILHash": "TjHZu6HBU7QKUFkLtmHoz5Y04RS1H1NzmJtAIXJu6Kk=",
+            "MSILHash": "ER2N1v3yytK1n4QSWv5Uod+nySK0qQLV6Ys6burZtB4=",
             "BaseHookName": null,
             "HookCategory": "Game"
           }
