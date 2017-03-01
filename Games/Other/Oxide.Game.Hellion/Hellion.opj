@@ -1,0 +1,181 @@
+{
+  "Name": "Hellion",
+  "TargetDirectory": "D:\\Servers\\Game\\Other\\hellion\\",
+  "Manifests": [
+    {
+      "AssemblyName": "HELLION_Dedicated.exe",
+      "Hooks": [
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 36,
+            "ReturnBehavior": 1,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "l0, l3",
+            "HookTypeName": "Simple",
+            "Name": "OnTextChat",
+            "HookName": "IOnTextChatMessage",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "TextChatMessageListener",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "ZeroGravity.Network.NetworkData"
+              ]
+            },
+            "MSILHash": "oexvCPnjYLGRc5z+xPdRnA/u8YFriiUzlmEm/4YF79k=",
+            "BaseHookName": null,
+            "HookCategory": "Chat"
+          }
+        },
+        {
+          "Type": "InitOxide",
+          "Hook": {
+            "InjectionIndex": 0,
+            "HookTypeName": "Initialize Oxide",
+            "Name": "InitOxide",
+            "HookName": "Initilize Oxide",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": ".ctor",
+              "ReturnType": "System.Void",
+              "Parameters": []
+            },
+            "MSILHash": "NHZS7GsDyRwBb/J/y5A/zVq+LAVQxOlPBAHg8Vgw+Es=",
+            "BaseHookName": null,
+            "HookCategory": "Server"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 198,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 0,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnStart",
+            "HookName": "IOnStart",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 0,
+              "Name": "Start",
+              "ReturnType": "System.Void",
+              "Parameters": []
+            },
+            "MSILHash": "z2YnS7unggGrsH+z7RFwxmg1TEk9zh+3hf9zbaSyMrs=",
+            "BaseHookName": null,
+            "HookCategory": "Server"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 257,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 0,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnSaved",
+            "HookName": "IOnSaved",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Persistence",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "Save",
+              "ReturnType": "System.Void",
+              "Parameters": []
+            },
+            "MSILHash": "J2g8HH/h64bk3LiF9fsPRjLgjIhAKd6XjpEZ/MAIwRE=",
+            "BaseHookName": null,
+            "HookCategory": "Server"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 197,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "l0",
+            "HookTypeName": "Simple",
+            "Name": "OnSpawnStartingModule",
+            "HookName": "IOnSpawnStartingModule",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "SpawnStartingModule",
+              "ReturnType": "ZeroGravity.Objects.Ship",
+              "Parameters": []
+            },
+            "MSILHash": "5okBPDi5kwOQPMWe1QfOojLTKG5cU7f32SCPvs4h12g=",
+            "BaseHookName": null,
+            "HookCategory": "Game"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 724,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 0,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnInitializeWorld",
+            "HookName": "IOnInitializeWorld",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "InitializeWorld",
+              "ReturnType": "System.Void",
+              "Parameters": []
+            },
+            "MSILHash": "TjHZu6HBU7QKUFkLtmHoz5Y04RS1H1NzmJtAIXJu6Kk=",
+            "BaseHookName": null,
+            "HookCategory": null
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 0,
+            "ReturnBehavior": 1,
+            "ArgumentBehavior": 2,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnLoginPlayer",
+            "HookName": "IOnLoginPlayer",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 1,
+              "Name": "LoginPlayer",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "ZeroGravity.Network.EventSystem/InternalEventData"
+              ]
+            },
+            "MSILHash": "canZ0jWkz8iQ2b6u7v/FrzYbQGAnTRRcjxfZpoPo/2o=",
+            "BaseHookName": null,
+            "HookCategory": null
+          }
+        }
+      ],
+      "Modifiers": []
+    }
+  ]
+}
