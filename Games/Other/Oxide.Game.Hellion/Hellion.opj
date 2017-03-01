@@ -127,32 +127,6 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 0,
-            "ReturnBehavior": 1,
-            "ArgumentBehavior": 2,
-            "ArgumentString": null,
-            "HookTypeName": "Simple",
-            "Name": "OnLoginPlayer",
-            "HookName": "IOnLoginPlayer",
-            "AssemblyName": "HELLION_Dedicated.exe",
-            "TypeName": "ZeroGravity.Server",
-            "Flagged": false,
-            "Signature": {
-              "Exposure": 1,
-              "Name": "LoginPlayer",
-              "ReturnType": "System.Void",
-              "Parameters": [
-                "ZeroGravity.Network.EventSystem/InternalEventData"
-              ]
-            },
-            "MSILHash": "canZ0jWkz8iQ2b6u7v/FrzYbQGAnTRRcjxfZpoPo/2o=",
-            "BaseHookName": null,
-            "HookCategory": "Server"
-          }
-        },
-        {
-          "Type": "Simple",
-          "Hook": {
             "InjectionIndex": 39,
             "ReturnBehavior": 0,
             "ArgumentBehavior": 4,
@@ -176,6 +150,58 @@
             "MSILHash": "dZvQp8nXBuWlqPxzDGZAvr7RE3xznbjikt9LEb+pVKg=",
             "BaseHookName": null,
             "HookCategory": "Game"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 285,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 0,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnClientLogin",
+            "HookName": "IOnClientLogin",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Network.NetworkController",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "LogInRequestListener",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "ZeroGravity.Network.NetworkData"
+              ]
+            },
+            "MSILHash": "zlCSAXT0hPQgGit7qch8bBaF5PT8JfeamUcj/FD1s0w=",
+            "BaseHookName": null,
+            "HookCategory": "Server"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 339,
+            "ReturnBehavior": 0,
+            "ArgumentBehavior": 0,
+            "ArgumentString": null,
+            "HookTypeName": "Simple",
+            "Name": "OnClientLogin 2",
+            "HookName": "IOnClientLogin",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Network.NetworkController",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "LogInRequestListener",
+              "ReturnType": "System.Void",
+              "Parameters": [
+                "ZeroGravity.Network.NetworkData"
+              ]
+            },
+            "MSILHash": "zlCSAXT0hPQgGit7qch8bBaF5PT8JfeamUcj/FD1s0w=",
+            "BaseHookName": "OnClientLogin",
+            "HookCategory": "Server"
           }
         }
       ],
