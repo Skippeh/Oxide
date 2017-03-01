@@ -9,6 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Oxide.Game.Hellion</RootNamespace>
     <AssemblyName>Oxide.Game.Hellion</AssemblyName>
+    <GameName>$(MSBuildProjectName)</GameName>
+    <BundleDir>$(SolutionDir)Bundles</BundleDir>
+    <ManagedDir>.</ManagedDir>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -63,11 +66,30 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+  <Target Name="Clean">
+    <RemoveDir Directories="$(BundleDir)\$(GameName)" />
   </Target>
   <Target Name="AfterBuild">
+    <ItemGroup>
+      <ConfigFiles Include="$(ProjectDir)\Patched\oxide.config.json" />
+      <ManagedFiles Include="$(SolutionDir)\Extensions\Oxide.Core.CSharp\$(OutputPath)\*.dll*" />
+      <ManagedFiles Include="$(SolutionDir)\Extensions\Oxide.Core.CSharp\Dependencies\**\*.dll; $(SolutionDir)\Extensions\Oxide.Core.CSharp\Dependencies\**\*.so*" />
+      <ManagedFiles Include="$(SolutionDir)\Extensions\Oxide.Core.MySql\$(OutputPath)\*.dll*" />
+      <ManagedFiles Include="$(SolutionDir)\Extensions\Oxide.Core.MySql\Dependencies\*.dll" />
+      <ManagedFiles Include="$(SolutionDir)\Extensions\Oxide.Core.SQLite\$(OutputPath)\*.dll*" />
+      <ManagedFiles Include="$(SolutionDir)\Extensions\Oxide.Core.SQLite\Dependencies\**\*.*" />
+      <ManagedFiles Include="$(SolutionDir)\Oxide.Core\$(OutputPath)\*.dll*" />
+      <ManagedFiles Include="$(SolutionDir)\Oxide.Core\Dependencies\*.dll" />
+      <ManagedFiles Include="$(TargetDir)\*.dll*" Exclude="$(TargetDir)\Assembly-*.dll; $(TargetDir)\Facepunch.*.dll; $(TargetDir)\Rust.*.dll; $(TargetDir)\UnityEngine*.dll" />
+      <ManagedFiles Include="$(TargetDir)\HELLION_Dedicated.exe" />
+      <GameFiles Include="$(ProjectDir)\Files\**\*.*; $(ProjectDir)\Files\*.*" />
+      <PatchedFiles Include="$(ProjectDir)\Patched\*.dll" />
+    </ItemGroup>
+    <Exec Command="pdb2mdb %(ManagedFiles.Identity)" Condition="'$(Configuration)' == 'Debug' And '$(OS)' == 'Windows_NT'" IgnoreExitCode="true" />
+    <Copy SourceFiles="@(ConfigFiles)" DestinationFiles="@(ConfigFiles->'$(BundleDir)\$(GameName)\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(ManagedFiles)" DestinationFiles="@(ManagedFiles->'$(BundleDir)\$(GameName)\$(ManagedDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(NativeFiles)" DestinationFiles="@(NativeFiles->'$(BundleDir)\$(GameName)\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(GameFiles)" DestinationFiles="@(GameFiles->'$(BundleDir)\$(GameName)\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(PatchedFiles)" DestinationFiles="@(PatchedFiles->'$(BundleDir)\$(GameName)\$(ManagedDir)\%(Filename)%(Extension)')" />
   </Target>
-  -->
 </Project>
