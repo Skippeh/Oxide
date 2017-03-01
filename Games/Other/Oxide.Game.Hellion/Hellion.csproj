@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\TextChatMessageExtensions.cs" />
     <Compile Include="HellionCore.cs" />
     <Compile Include="HellionExtension.cs" />
     <Compile Include="HellionPlugin.cs" />
