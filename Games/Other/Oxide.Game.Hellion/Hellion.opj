@@ -47,7 +47,7 @@
               "ReturnType": "System.Void",
               "Parameters": []
             },
-            "MSILHash": "QvpeP/lAjRubTzA9UmzJzkqK9kAHf20dINOVyNm2j6I=",
+            "MSILHash": "1gccVkXHBueZuudD+OnyobyHSX810dKarPU5nzWv4ng=",
             "BaseHookName": null,
             "HookCategory": "Server"
           }
@@ -55,7 +55,7 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 198,
+            "InjectionIndex": 208,
             "ReturnBehavior": 0,
             "ArgumentBehavior": 1,
             "ArgumentString": null,
@@ -71,7 +71,7 @@
               "ReturnType": "System.Void",
               "Parameters": []
             },
-            "MSILHash": "z2YnS7unggGrsH+z7RFwxmg1TEk9zh+3hf9zbaSyMrs=",
+            "MSILHash": "5Xeik82X6UCCtJfYZPLLUQlvVVdh+7g5p1aZK9zpPx4=",
             "BaseHookName": null,
             "HookCategory": "Server"
           }
@@ -103,7 +103,7 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 779,
+            "InjectionIndex": 812,
             "ReturnBehavior": 0,
             "ArgumentBehavior": 0,
             "ArgumentString": null,
@@ -119,7 +119,7 @@
               "ReturnType": "System.Void",
               "Parameters": []
             },
-            "MSILHash": "ER2N1v3yytK1n4QSWv5Uod+nySK0qQLV6Ys6burZtB4=",
+            "MSILHash": "2WhOoW2fZz31A0GxOFMSR1zEVFq2C+z9bEft1MK4/IU=",
             "BaseHookName": null,
             "HookCategory": "Game"
           }
@@ -147,7 +147,7 @@
                 "ZeroGravity.Data.GameScenes/SceneID"
               ]
             },
-            "MSILHash": "dZvQp8nXBuWlqPxzDGZAvr7RE3xznbjikt9LEb+pVKg=",
+            "MSILHash": "lP+Zy2Z6RJ8JPe00cRUIddij4AW9QX/RzvWsLfxcexg=",
             "BaseHookName": null,
             "HookCategory": "Game"
           }
