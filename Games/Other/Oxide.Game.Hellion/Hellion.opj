@@ -127,38 +127,10 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 39,
-            "ReturnBehavior": 0,
-            "ArgumentBehavior": 4,
-            "ArgumentString": "a0, l0",
-            "HookTypeName": "Simple",
-            "Name": "OnSpawnStartingModule",
-            "HookName": "IOnSpawnStartingModule",
-            "AssemblyName": "HELLION_Dedicated.exe",
-            "TypeName": "ZeroGravity.Server",
-            "Flagged": false,
-            "Signature": {
-              "Exposure": 0,
-              "Name": "AddPlayerToShip",
-              "ReturnType": "System.Boolean",
-              "Parameters": [
-                "ZeroGravity.Objects.Player",
-                "System.Int64",
-                "ZeroGravity.Data.GameScenes/SceneID"
-              ]
-            },
-            "MSILHash": "lP+Zy2Z6RJ8JPe00cRUIddij4AW9QX/RzvWsLfxcexg=",
-            "BaseHookName": null,
-            "HookCategory": "Game"
-          }
-        },
-        {
-          "Type": "Simple",
-          "Hook": {
             "InjectionIndex": 285,
             "ReturnBehavior": 0,
-            "ArgumentBehavior": 0,
-            "ArgumentString": null,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "l0",
             "HookTypeName": "Simple",
             "Name": "OnClientLogin",
             "HookName": "IOnClientLogin",
@@ -181,10 +153,10 @@
         {
           "Type": "Simple",
           "Hook": {
-            "InjectionIndex": 339,
+            "InjectionIndex": 333,
             "ReturnBehavior": 0,
-            "ArgumentBehavior": 0,
-            "ArgumentString": null,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "l0",
             "HookTypeName": "Simple",
             "Name": "OnClientLogin 2",
             "HookName": "IOnClientLogin",
@@ -203,9 +175,91 @@
             "BaseHookName": "OnClientLogin",
             "HookCategory": "Server"
           }
+        },
+        {
+          "Type": "Simple",
+          "Hook": {
+            "InjectionIndex": 0,
+            "ReturnBehavior": 1,
+            "ArgumentBehavior": 4,
+            "ArgumentString": "",
+            "HookTypeName": "Simple",
+            "Name": "OnSpawnStartingModule",
+            "HookName": "IOnSpawnStartingModule",
+            "AssemblyName": "HELLION_Dedicated.exe",
+            "TypeName": "ZeroGravity.Server",
+            "Flagged": false,
+            "Signature": {
+              "Exposure": 2,
+              "Name": "SpawnStartingModule",
+              "ReturnType": "ZeroGravity.Objects.Ship",
+              "Parameters": []
+            },
+            "MSILHash": "UoA4Ss9lUr2jjn9ilmka9TgGwvhuoA6WLAqwWTk+edE=",
+            "BaseHookName": null,
+            "HookCategory": null
+          }
         }
       ],
-      "Modifiers": []
+      "Modifiers": [
+        {
+          "Name": "ZeroGravity.Server::SpawnLists",
+          "AssemblyName": "HELLION_Dedicated.exe",
+          "TypeName": "ZeroGravity.Server",
+          "Type": 0,
+          "TargetExposure": [
+            2
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              0
+            ],
+            "Name": "SpawnLists",
+            "FullTypeName": "System.Collections.Generic.Dictionary`2<ZeroGravity.Server/SpawnListType,System.Collections.Generic.List`1<System.Int64>> ZeroGravity.Server::SpawnLists",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        },
+        {
+          "Name": "ZeroGravity.Server/SpawnPointInviteData",
+          "AssemblyName": "HELLION_Dedicated.exe",
+          "TypeName": "ZeroGravity.Server/SpawnPointInviteData",
+          "Type": 3,
+          "TargetExposure": [
+            5
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              5
+            ],
+            "Name": "SpawnPointInviteData",
+            "FullTypeName": "ZeroGravity.Server/SpawnPointInviteData",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        },
+        {
+          "Name": "ZeroGravity.Server/SpawnListType",
+          "AssemblyName": "HELLION_Dedicated.exe",
+          "TypeName": "ZeroGravity.Server/SpawnListType",
+          "Type": 3,
+          "TargetExposure": [
+            2
+          ],
+          "Flagged": false,
+          "Signature": {
+            "Exposure": [
+              0
+            ],
+            "Name": "SpawnListType",
+            "FullTypeName": "ZeroGravity.Server/SpawnListType",
+            "Parameters": []
+          },
+          "MSILHash": ""
+        }
+      ]
     }
   ]
 }
