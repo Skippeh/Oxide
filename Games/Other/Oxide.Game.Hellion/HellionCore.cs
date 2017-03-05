@@ -46,11 +46,13 @@ namespace Oxide.Game.Hellion
         {
             return Interface.Call("OnSpawnStartingModule") as Ship;
         }
-
-        [HookMethod("IOnLoginPlayer")]
-        private void base_OnLoginPlayer(EventSystem.InternalEventData data)
+        
+        [HookMethod("IOnClientLogin")]
+        private void base_OnClientLogin(LogInRequest loginRequest)
         {
-            
+            var client = loginRequest.GetClient();
+            var player = loginRequest.GetPlayer();
+            Dbg.Info(client.ClientGUID, player?.Name);
         }
     }
 }
