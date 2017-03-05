@@ -1,8 +1,7 @@
 ﻿using Oxide.Core;
-using Oxide.Core.Logging;
 using Oxide.Core.Plugins;
 using Oxide.Game.Hellion.Extensions;
-using Oxide.Plugins;
+using Oxide.Game.Hellion.Loggers;
 using ZeroGravity;
 using ZeroGravity.Network;
 using ZeroGravity.Objects;
@@ -26,29 +25,26 @@ namespace Oxide.Game.Hellion
         private void base_OnStart(Server server)
         {
             Server = server;
-            Dbg.Info("OnStart");
-            CallHook("OnStart", server);
+            Interface.Call("OnStart", server);
         }
 
         [HookMethod("IOnSaved")]
         private void base_OnSaved()
         {
-            Dbg.Info("OnSaved");
-            CallHook("OnSaved");
+            Interface.Call("OnSaved");
         }
 
         [HookMethod("IOnTextChat")]
         private void base_OnTextChat(TextChatMessage chatMessage, bool local)
         {
-            Dbg.Info($"OnTextChat: {chatMessage.MessageText} ({chatMessage.GetPlayer().Name}) local: {local}");
-            CallHook("OnTextChat", chatMessage, local);
+            var player = chatMessage.GetPlayer();
+            Interface.Call("OnTextChat", player, chatMessage, local);
         }
 
         [HookMethod("IOnSpawnStartingModule")]
-        private void base_OnSpawnStartingModule(Player player, Ship ship)
+        private Ship base_OnSpawnStartingModule()
         {
-            Dbg.Info($"OnSpawnStartingModule for player ${player.Name}");
-            CallHook("OnSpawnStartingModule", player, ship);
+            return Interface.Call("OnSpawnStartingModule") as Ship;
         }
 
         [HookMethod("IOnLoginPlayer")]
