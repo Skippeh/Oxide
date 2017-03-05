@@ -19,11 +19,7 @@ namespace Oxide.Game.Hellion
         public HellionCore()
         {
             Author = "Skipcast";
-
-            Interface.Oxide.RootLogger.AddLogger(new CallbackLogger(message =>
-            {
-                Dbg.Info(message);
-            }));
+            Interface.Oxide.RootLogger.AddLogger(new HellionLogger());
         }
 
         [HookMethod("IOnStart")]

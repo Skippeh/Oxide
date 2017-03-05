@@ -53,6 +53,7 @@
     <Compile Include="HellionExtension.cs" />
     <Compile Include="HellionPlugin.cs" />
     <Compile Include="HellionPluginLoader.cs" />
+    <Compile Include="Loggers\HellionLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
